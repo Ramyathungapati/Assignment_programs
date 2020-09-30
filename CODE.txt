@@ -1,0 +1,184 @@
+1. Write a program to remove duplicate elements from the array of integers.
+
+CODING:
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace removeduplicates
+{
+	class Program
+	{
+		static void Main(string[] args)
+		{
+			int i, n, j, x;
+			int[] arr = new int[55];
+
+			Console.WriteLine("Enter the Array size : ");
+			n = int.Parse(Console.ReadLine());           //for conversion we use parse
+
+			Console.WriteLine("enter the Array Elements : ");
+			for (i = 0; i < n; i++)
+			{
+				arr[i] = int.Parse(Console.ReadLine());
+			}
+
+			Console.WriteLine("original Arrays : ");
+			for (i = 0; i < n; i++)
+			{
+				Console.WriteLine(arr[i]);
+			}
+
+			Console.WriteLine("After Removing Duplicate Elements : "); 
+			for (i = 0; i < n; i++)
+			{
+				for (j = i + 1; j < n;)
+				{
+					if (arr[i] == arr[j])
+					{
+						for (x = j; x < n; x++)
+						{
+							arr[x] = arr[x + 1];
+						}
+						n--;
+					}
+					else
+					{
+						j++;
+					}
+				}
+			}
+			for(i=0;i<n;i++)
+			{
+				Console.WriteLine(arr[i]);
+			}
+			Console.ReadLine();
+		}
+	}
+}
+	
+------------------------------------------------------------------------------------------------------------------------
+
+2.Write a program to count how many numbers of times each character appears/present in the given string.
+
+
+CODING:
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace CountNumberofWords
+{
+	class Program
+	{
+		static void Main(string[] args)
+		{
+			Console.Write("Enter the string : ");
+			string inputstring = Console.ReadLine();
+
+			while (inputstring.Length > 0)
+			{
+				int countOfChar = 0;
+				Console.Write($"{inputstring[0]}=");
+				for (int i = 0; i < inputstring.Length; i++)
+				{
+					if (inputstring[0] == inputstring[i])
+					{
+						countOfChar++;
+
+					}
+				}
+				Console.WriteLine($"{countOfChar}");
+				inputstring=inputstring.Replace(inputstring[0].ToString(), string.Empty);
+				Console.ReadLine();
+			}
+		}
+	}
+}
+
+---------------------------------------------------------------------------------------------------------------
+
+
+Assignment 1 
+
+Requirement-1: Write a program to print multiplication table of given number:
+
+CODING:
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Multiplication
+{
+	class Program
+	{
+	     static void Main(string[] args)
+		{
+			int num, product;
+			Console.Write("Enter the Number to Print its Multiplication Table: ");
+			num = Convert.ToInt32(Console.ReadLine());
+			Console.WriteLine("\nMultiplication Table For {0}: ", num);
+			for (int i = 1; i <= 10; i++)
+			{
+				product = num * i;
+				Console.WriteLine("{0} x {1} = {2}", num, i, product);
+			}
+
+			//Hit ENTER to exit the program
+			Console.ReadKey();
+		}
+	}
+}
+
+------------------------------------------------------------------------------------------------------
+
+Requirement-2: Write a program to print if the given string is palindrome or not
+
+CODING:
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace palindrom
+{
+	class Program
+	{
+		static void Main(string[] args)
+		{
+			Console.Write("Enter a string to Check Palindrome : ");
+
+			string name = Console.ReadLine();
+			string reverse = string.Empty;
+
+			for (int i = name.Length - 1; i >= 0; i--)
+			{
+				reverse += name[i];
+			}
+
+			if (name == reverse)
+			{
+				Console.WriteLine($"{name} is Palindrome.");
+			}
+			else
+			{
+				Console.WriteLine($"{name} is not Palindrome");
+			}
+			Console.ReadKey();
+		}
+	}
+}
+
+---------------------------------------------------------------------------------------------------
+	
+
