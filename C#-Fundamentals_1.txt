@@ -1,0 +1,411 @@
+3.largest number
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace LargestNumber1
+{
+	class Program
+	{
+		static void Main(string[] args)
+		{
+			//get the number of elements
+			Console.WriteLine("enter the number of elements");
+			int i;
+			i = Convert.ToInt32(Console.ReadLine());
+			int[] num = new int[i];
+			
+			//accept the elements
+			for (int size = -1; size < i; size++)
+			{
+				Console.WriteLine("enter the elements");
+				num[size] = Convert.ToInt32(Console.ReadLine());
+			}
+			
+			 //Greatest
+			int max = num.Max();
+			int min = num.Min();
+			Console.WriteLine("the m", max);
+			Console.WriteLine("the mi", min);
+
+			Console.Read();
+		}
+	}
+}
+----------------------------------------------------------------------------------------------
+4. Armstrong number or not
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Armstrong_Number_or_not
+{
+	class Program
+	{
+		static void Main(string[] args)
+		{
+			int num = 153, sum = 0, rem;
+			int i = num;
+			while (i > 0)
+			{
+				rem = i % 10;
+				sum = sum + rem * rem * rem;
+				i = i / 10;
+			}
+			if (sum == num)
+				Console.WriteLine("Number is armstrong");
+			else
+				Console.WriteLine("Number is not armstrong"); 
+			 Console.ReadKey();
+		}
+	}
+}
+------------------------------------------------------------------------------------
+2.sum of digits of the number:
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Sumofdigits
+{
+	class Program
+	{
+		static void Main(string[] args)
+		{
+			int num, sum = 0, r;
+
+			Console.WriteLine("Enter a Number : ");
+			num = int.Parse(Console.ReadLine());
+
+			while (num != 0)
+			{
+				r = num % 10;
+				num = num / 10;
+				sum = sum + r;
+			}
+
+			Console.WriteLine("The sum of the digits in the number: " + sum);
+			Console.ReadLine();
+		}
+	}
+}
+
+------------------------------------------------------------------------------------------
+3.factorial of numbers:
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Factorial
+{
+	class Program
+	{
+		static void Main(string[] args)
+		{
+			int i, number, fact=1;
+			Console.WriteLine("Enter the Number");
+			number = int.Parse(Console.ReadLine());
+			fact = number;
+			for (i = number - 1; i >= 1; i--)
+			{
+				fact = fact * i;
+			}
+			Console.WriteLine("Factorial of " + number + " is : " + fact);
+				if (fact%2==0)
+			{
+				Console.WriteLine("Given Factorial number" + fact + " is a prime number");
+			}	
+				else
+			{
+				Console.WriteLine("Given Factorial number" + fact + " is not a prime number");
+			}
+			Console.ReadLine();
+		}
+
+	}
+}
+----------------------------------------------------------------------------------------------------
+5.first 10 natural numbers
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _10NaturalNumbers
+{
+	class Program
+	{
+		static void Main(string[] args)
+		{
+			int i, sum = 0;
+			Console.Write("\n\nFind the sum of first 10 natural numbers:\n");
+			Console.Write("----------------------------------------------\n\n");
+			
+
+			Console.Write("The first 10 natural number are :\n");
+			for (i = 1; i <= 10; i++)
+			{
+				sum = sum + i;
+				Console.Write("{0} ", i);
+			}
+			Console.Write("\nThe Sum is : {0}\n", sum);
+			Console.ReadLine();
+		}
+	}
+}
+-------------------------------------------------------------------------------------------
+6.first 10 natural numbers in reverse order
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ReverseOrder
+{
+	class Program
+	{
+		static void Main(string[] args)
+		{
+			int rem;
+			int v = 0;
+			Console.WriteLine("Enter the input Number : ");
+			int n = Convert.ToInt32(Console.ReadLine());
+			while (n != 0)
+			{
+				rem = n % 10;
+				v = v * 10 + rem;
+				n /= 10;
+
+
+			}
+			Console.WriteLine("reverse no is {0}", v);
+			Console.ReadKey();
+		}
+	}
+}
+-------------------------------------------------------------------------------
+7.first 10 even natural numbers
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _10EvenNaturalNumbers
+{
+	class Program
+	{
+		static void Main(string[] args)
+		{
+			int i;
+			Console.WriteLine("print the 10 even natural numbers");
+			
+			for(i=1;i<=10;i++)
+			{
+				if(i%2==0)
+				{
+					Console.WriteLine(" number " + i + " is an even number");
+				}
+			}
+			Console.ReadLine();
+		}
+	}
+}
+----------------------------------------------------------------------------------------
+8.numbers between the range
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace RangebetweenNumbers
+{
+	class Program
+	{
+		static void Main(string[] args)
+		{
+			int srt, lst;
+			Console.WriteLine("Enter starting number : ");
+			srt = Convert.ToInt32(Console.ReadLine());
+			Console.WriteLine("\n");
+
+			Console.WriteLine("Enter last number : ");
+			lst = Convert.ToInt32(Console.ReadLine());
+			Console.WriteLine("\n");
+
+			Console.WriteLine("Numbers between the range : ");
+			for (int i = srt; i <= lst; i++)
+			{
+				Console.WriteLine("{0}", i);
+			}
+			Console.ReadKey();
+		}
+	}
+}
+------------------------------------------------------------------------------
+9.number is prime or not.
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Prime_or_Not
+{
+	class Program
+	{
+		static void Main(string[] args)
+		{
+			int count = 0;
+			Console.WriteLine("Enter a number");
+			int num = Convert.ToInt32(Console.ReadLine());
+			for (int i = 1; i <= num; i++)
+			{
+				if (num % i == 0)
+					count++;
+			}
+			if (count == 2)
+				Console.WriteLine("number is prime");
+			else
+				Console.WriteLine("number is not prime");
+			Console.ReadKey();
+		}
+	}
+}
+------------------------------------------------------------------------------
+10. prime numbers between 2 to 100
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace primenumber_2to100
+{
+	class Program
+	{
+		static void Main(string[] args)
+		{
+			int i,j,count=0;
+			Console.WriteLine("Prime numbers are : ");
+			int number = Convert.ToInt32(Console.ReadLine());
+			for(i=2;i<=100;i++)
+			{
+				count = 0;
+				if(i>1)
+				{
+					for(j=2;j<i;j++)
+					{
+						if(i%j==0)
+						{
+							count = 1;
+							break;
+						}
+					}
+				}
+				if (count == 0)
+					Console.Write(i + " ");
+			}
+			Console.ReadKey();
+		}
+	}
+}
+----------------------------------------------------------------------------------
+12.palindrome or not
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace palindrom
+{
+	class Program
+	{
+		static void Main(string[] args)
+		{
+			Console.Write("Enter a string to Check Palindrome : ");
+
+			string name = Console.ReadLine();
+			string reverse = string.Empty;
+
+			for (int i = name.Length - 1; i >= 0; i--)
+			{
+				reverse += name[i];
+			}
+
+			if (name == reverse)
+			{
+				Console.WriteLine($"{name} is Palindrome.");
+			}
+			else
+			{
+				Console.WriteLine($"{name} is not Palindrome");
+			}
+			Console.ReadKey();
+		}
+	}
+}
+---------------------------------------------------------------------------------------
+13.find ncr
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ncr
+{
+	class Program
+	{
+		static void Main(string[] args)
+		{
+			int n = 5, r = 3;
+			Console.Write(nCr(n, r));
+			Console.ReadKey();
+		}
+		static int nCr(int n, int r)
+		{
+			return fact(n) / (fact(r) *
+						  fact(n - r));
+		}
+
+		// Returns factorial of n 
+		static int fact(int n)
+		{
+			int res = 1;
+			for (int i = 2; i <= n; i++)
+				res = res * i;
+			return res;
+		}
+	}
+}
+--------------------------------------------------------------------------------------
+
+
+
+
+
