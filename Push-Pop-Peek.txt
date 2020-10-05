@@ -1,0 +1,64 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace push_pop_peek
+{
+	class Program
+	{
+		static void Main(string[] args)
+		{
+
+			{
+				Stack<int> s = new Stack<int>();
+				s.Push(2);
+				s.Push(4);
+				s.Push(6);
+				s.Push(8);
+				s.Push(10);
+				s.Push(12);
+				s.Push(14);
+				s.Push(16);
+				s.Push(18);
+				s.Push(20);
+				Console.WriteLine("Stack Elements of s are: ");
+				foreach (int i in s)
+				{
+					Console.WriteLine(i);
+
+				}
+				Console.ReadLine();
+
+				s.Pop();
+				s.Pop();
+				s.Pop();
+				s.Pop();
+				s.Pop();
+				s.Pop();
+				Console.WriteLine("after 6 pop operations");
+				Console.WriteLine("the top element in the stack is {0} ", s.Peek());
+
+				foreach (int z in s)
+				{
+					Console.WriteLine("the elemnets in the stack are {0}", z);
+				}
+
+				s.Pop();
+				s.Pop();
+				s.Pop();
+				Console.WriteLine("the top element in the stack is {0} ", s.Peek());
+				s.Pop();
+				s.Pop();
+				foreach (int z in s)
+				{
+					Console.WriteLine("the elemnets in the stack are {0}", z);
+				}
+				Console.ReadKey();
+
+			}
+		}
+	}
+
+}
