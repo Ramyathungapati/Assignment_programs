@@ -1,0 +1,67 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WindowsFormsAnonymous_Assgmnt2
+{
+	public partial class Form1 : Form
+	{
+		public Form1()
+		{
+			InitializeComponent();
+		}
+
+		private void button1_Click(object sender, EventArgs e)
+		{
+			Button b = new Button();  //Reference  to the Button
+			b.Text = "Click Me";     //Text implemented as "Click Me" on the button apperance
+			b.Size = new Size(100, 50); //Size mentioned for the button
+			b.Location = new Point(150, 150); //Point located  on the button created
+			this.Controls.Add(b); //Controlling mechanism of button should go to the center.
+
+			//Delegate with Anonymous Method
+
+			b.Click += delegate (object sender1, EventArgs e1)
+			{
+				MessageBox.Show("Hello World!!!");
+			};
+			//Delegate with Anonymous Method
+
+			b.Click += delegate (object sender2, EventArgs e2)
+			{
+				MessageBox.Show("Programming is fun!!!");
+			};
+			//Delegate with Anonymous Method
+
+			b.Click += delegate (object sender3, EventArgs e3)
+			{
+				MessageBox.Show("This is printing!!!");
+			};
+			//Delegate with Anonymous Method
+
+			b.Click += delegate (object sender4, EventArgs e4)
+			{
+				MessageBox.Show("This is printing again!!!");
+			};
+			//Delegate with Anonymous Method
+
+			b.Click += delegate (object sender5, EventArgs e5)
+			{
+				MessageBox.Show("Yeyy! This is Crazy!!");
+			};
+			//Delegate with Anonymous Method
+
+			b.Click += delegate (object sender6, EventArgs e6)
+			{
+				MessageBox.Show("Yeyy! This is Printing Crazy!!");
+			};
+
+		}
+	}
+}
