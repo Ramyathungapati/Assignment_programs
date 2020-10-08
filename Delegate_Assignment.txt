@@ -1,0 +1,89 @@
+Delegate_Assignment
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Delegate_Assignment
+{
+	//****Defining delegate*******
+
+	public delegate double AddnumsDelegate(int x, float y);
+	public delegate int MultiplyDelegate(int x, int y);
+	public delegate void NamesDelegate(string str);
+	public delegate void WishDelegate(string str);
+	public delegate bool CheckLengthDelegate(string str);
+	public delegate bool CheckLength1Delegate(string str);
+
+	class Program
+	{
+		//****Instantiate the delegate****
+
+		//return value Method
+		public static double Addnums(int x, float y)
+		{
+			return (x + y);
+		}
+		//return value method
+		public static int Multiply(int x, int y)
+		{
+			return (x * y);
+		}
+
+		//non-return value Method
+		public static void Names(string Ramya)
+		{
+			Console.WriteLine(" Hai " + Ramya + " welcome ");
+		}
+		//non-return value Method
+		public static void Wish(string sir)
+		{
+			Console.WriteLine(" Good Morning " + sir + " day ");
+		}
+
+		public static bool CheckLength(string name1)
+		{
+			if (name1.Length > 5)
+				return true;
+			return false;
+		}
+		public static bool CheckLength1(string namee)
+		{
+			if (namee.Length < 3)
+				return true;
+			return false;
+		}
+
+		static void Main(string[] args)
+		{
+			//***Creating object***
+			//***invoke the values***
+			AddnumsDelegate obj = new AddnumsDelegate(Addnums);
+			double result = obj.Invoke(50, 50);
+			Console.WriteLine(result);
+
+			MultiplyDelegate obj1 = new MultiplyDelegate(Multiply);
+			int result1 = obj1.Invoke(50, 50);
+			Console.WriteLine(result1);
+
+			NamesDelegate n = new NamesDelegate(Names);
+			n.Invoke(" Ramya ");
+
+			WishDelegate w = new WishDelegate(Wish);
+			w.Invoke(" have a nice ");
+
+			CheckLengthDelegate c = new CheckLengthDelegate(CheckLength);
+			bool check = c.Invoke(" Abhigna ");
+			Console.WriteLine(check);
+
+			CheckLength1Delegate c1 = new CheckLength1Delegate(CheckLength);
+			bool check1 = c.Invoke(" Ramyathungapati ");
+			Console.WriteLine(check1);
+
+			Console.ReadLine();
+		}
+	}
+}
