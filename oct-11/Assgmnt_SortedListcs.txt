@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Assgmnt_SortedList
+{
+	class Program
+	{
+		static void Main(string[] args)
+		{
+			//Sorted List
+			SortedList<int, string> numbers = new SortedList<int, string>();
+
+			numbers.Add(10, "TEN");
+			numbers.Add(1, "ONE");
+			numbers.Add(8, "EIGHT");
+
+			foreach (var check in numbers)
+			{
+				Console.WriteLine("Elements are sorted : " + "key : {0}, value : {0}", check.Key, check.Value);
+				Console.ReadKey();
+			}
+		}
+	}
+}
