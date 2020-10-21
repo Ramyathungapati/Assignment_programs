@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>hideShow</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<script>
+		$(document).ready(function () {
+			$("#hide").click(function () {
+				$("h3").hide(1000);
+			});
+			$("#show").click(function () {
+				$("h3").show(1000);
+			});
+		});
+	</script>
+	<script>
+		$(document).ready(function () {
+			$("button").click(function () {
+				$("h3").toggle();
+			});
+		});
+	</script>
+
+	<script>
+		$(document).ready(function () {
+			$("button").click(function () {
+				$("#div1").fadeIn();
+				$("#div2").fadeOut();
+				$("#div3").fadeToggle();
+				$("#div4").fadeTo();
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<h3>hide and show</h3>
+	<h3>hide and show</h3>
+	<h3>hide and show</h3>
+
+	<button id="hide">hide</button>
+	<button id="show">Show</button>
+
+	<button>click on the button to see the toggle of show and hide</button>
+
+	<p>This is a demo about jquery effects on the fade mechanism</p>
+
+	<div id="div1" style="width:70px;height:80px;background-color:cyan"></div>
+	<div id="div2" style="width:70px;height:80px;background-color:red"></div>
+	<div id="div3" style="width:70px;height:80px;background-color:pink"></div>
+	<div id="div4" style="width:70px;height:80px;background-color:blueviolet"></div>
+	<br /><br />
+	<button>Click to See the Fade Effect</button>
+</body>
+</html>
