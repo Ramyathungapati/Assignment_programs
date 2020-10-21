@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>SlidingEffect</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			$("#flip").click(function () {
+				$("#panel").slideDown(1000);
+			});
+		});
+	</script>
+	
+	<script>
+		$(document).ready(function () {
+			$("#flip1").click(function () {
+				$("#panel1").slideUp();
+			});
+		});
+	</script>
+	<script>
+		$(document).ready(function () {
+			$("#flip2").click(function () {
+				$("#panel2").slideToggle();
+			});
+		});
+	</script>
+
+	<script>
+		$(document).ready(function () {
+			$("button").click(function () {
+				$("p").animate({
+					left: '100px',
+					height: '100px',
+					width:'100px'
+				});
+			});
+		});
+	</script>
+
+	<script>
+		$(document).ready(function () {
+			$("button").click(function () {
+				$("div").animate({
+					width: 'toggle',
+					height:'toogle'
+				});
+			});
+		});
+	</script>
+
+	<script>
+
+	</script>
+
+	<style>
+		#panel, #flip {
+			background-color: lightpink;
+			text-align: left;
+			padding: 10px;
+		}
+
+		#panel {
+			padding: 20px;
+			display: none;
+		}
+	</style>
+
+	<style>
+		#panel1, #flip1 {
+			background-color: navajowhite;
+			text-align: center;
+			padding: 10px;
+		}
+
+		#panel1 {
+			padding: 20px;
+		}
+	</style>
+
+	<style>
+		#panel2, #flip2 {
+			background-color: aliceblue;
+			text-align: center;
+			padding: 10px;
+		}
+
+		#panel2 {
+			padding: 20px;
+		}
+	</style>
+
+</head>
+<body>
+
+	<div id="flip">Click to slidedown</div><br />
+	<div id="panel">Programming is fun</div><br />
+
+	<div id="flip1">Click to slideup</div><br />
+	<div id="panel1">programming</div><br />
+
+	<div id="flip2">Click to slideToggle</div><br />
+	<div id="panel2">programming</div><br />
+
+	<button>Start Animation</button><br />
+	<p style="background-color:aqua;width:160px;height:150px;position:absolute;"></p>
+
+	<p style="background-color:seagreen;width:60px;height:50px;position:absolute;"></p>
+
+</body>
+</html>
