@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Third WebTab</title>
+</head>
+<body>
+	<p>Demo on EventListenerMethod() on Windows object</p>
+	<p>Try resizing the browser(ctrl+ "+button") window by this resize event occurs </p>
+	<p id="demo"> </p>
+
+	<p> Demo on Passing parameters values using EventListenerMethod() </p>
+	<p>Click the button to perform Mathematic Operations below</p>
+	<button id="mybtn">multiplication</button>
+	<button id="mybtn1">addition</button>
+	<button id="mybtn2">substraction</button>
+	<p id="demo"></p>
+
+	<script>
+		var x = 10;
+		var y = 20;
+
+		document.getElementById("mybtn").addEventListener("click", function () {
+			multiplication(x, y);
+		});
+
+		document.getElementById("mybtn1").addEventListener("click", function () {
+			addition(x, y);
+		});
+		document.getElementById("mybtn2").addEventListener("click", function () {
+			substraction(x, y);
+		});
+		function multiplication(a, b) {
+			var multiplication = a * b;
+			document.getElementById("demo").innerHTML = multiplication;
+		}
+		function addition(c, d) {
+			var addition = c + d;
+			document.getElementById("demo").innerHTML = addition;
+		}
+		function substraction(e, f) {
+			var substraction = e - f;
+			document.getElementById("demo").innerHTML = substraction;
+		}
+
+	</script>
+
+	<script>
+		window.addEventListener("reload", function () {
+			document.getElementById("demo").innerHTML = HTMLTimeElement();
+		});
+	</script>
+</body>
+</html>

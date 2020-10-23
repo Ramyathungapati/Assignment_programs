@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>My First WebTab</title>
+</head>
+<body>
+	<!--<h1>Click on Hello-World it will display something new</h1>
+
+	<h1 onclick="this.innerHTML='WELCOME TO Javascript!!!!' ">HelloWorld</h1>-->
+
+	<h1>Function implementation on events</h1>
+	<h1 onclick="coffee(this)">HelloWorld</h1>
+	<h2 onclick="tea(this)">Programming is fun</h2>
+	<h3 onclick="milk(this)">This is printing</h3>
+	<h4 onclick="butter(this)">This is something crazy</h4>
+	<script>
+		function coffee(ramya) {
+			ramya.innerHTML = "Welcome to javascript..!!";
+		}
+		function tea(id) {
+			id.innerHTML = "We are learning Javascript document object module.";
+		}
+		function milk(id) {
+			id.innerHTML = "Javascript found easy to learn";
+		}
+		function butter(id) {
+			id.innerHTML = "Javascript runs on google chrome's V8 Engine";
+		}
+		function displayDate() {
+			document.getElementById("coffee").innerHTML = Date();
+			//Id = "demo"
+			//1.document.getElementById("demo");
+			//2.document.write("demo");
+			//3.document.console("demo"); <!--NOT FOR UI-->
+			//4.document.alert("demo");
+		}
+		function extraevent1(color) {
+			color.innerHTML = "this is crazy";
+		}
+		function extraevent2(color) {
+			color.innerHTML = "Mouse over me";
+		}
+		function extraevent3(color) {
+			color.innerHTML = "hai";
+		}
+		function extraevent4(color) {
+			color.innerHTML="Hello";
+		}
+	</script>
+
+	<script>
+		document.getElementById("white").addEventListner("click", function () {
+			Console.log("This is EventLister Method Example");
+			alert("This is EventLister Method Example using alert");
+			document.write("This is EventLister Method Example using document.write");
+			Console.log("This is EventLister Method log console");
+		});
+	</script>
+
+	<p>EventListner With an Explict Function</p>
+	<button id="object">Click_again</button>
+
+	<script>
+		function example() {
+			alert("This is EventLister Method Example using alert");
+			document.write("This is EventLister Method Example using document.write");
+			Console.log("This is EventLister Method log console");
+		}
+		document.getElementById("object").addEventListener("click".example);
+
+	</script>
+
+	<div onmouseover="extraevent1(this)" onmouseout="extraevent2(this)"
+		 style="background-color:pink; width:40%; height:100%; padding:60px; font-size:30px">
+		Show me up
+	</div>
+
+	<div onmousedown="extraevent3(this)" onmouseup="extraevent4(this)"
+		 style="background-color:pink; width:40%; height:100%; padding:60px; font-size:30px">
+		Show me up
+	</div>
+
+	<p>Click the button to display the date and time</p>
+	<button onclick="displayDate()">DateInfo</button>
+	<p id="coffee"></p>
+
+	<p>addEventListerMethod Demonstration w.r.t button</p>
+	<button id="white">Clickme</button>
+
+</body>
+</html>
