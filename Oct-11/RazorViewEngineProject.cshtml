@@ -1,0 +1,85 @@
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    
+	<div> 
+		<h1>Hello,Welcome to Razor</h1>
+    </div>
+	
+	<div>
+		<h1>Example of single Razor Expression</h1>
+		<label>Today's Date and Time : @DateTime.Now</label><br />
+		<label>Addition of 10 and 20 : @(10 + 20)</label><br />
+		<label>Subtraction of 10 and 20 : @(10 - 20)</label><br />
+		<label>Division of 10 and 20 : @(10 / 20)</label><br />
+		<label>Multiplication of 10 and 20 : @(10 * 20)</label><br />
+		<label>Modulus of 10 and 20 : @(10 % 20)</label><br />
+	</div>
+	
+	<p>Example of MultiLine Razor Expression</p>
+	
+	<div>
+		Inorder to work with Razor Line Expression we use syntax:
+		@{ 
+			var a = 10;
+			var b = 20;
+			var c = a + b;
+			var Name = "My name is Ramya";
+			var Job = "Software";
+			var ColorsList = new List<string>() { "White", "Orange", "Pink" };
+			var NumberList = new List<int>() { 10, 20, 30 };
+
+		}
+	</div>
+
+	<div>
+		<label>Addition of 10 and 20 is @(c)</label><br />
+		<label>@Name</label><br />
+		<label>@Job</label><br />
+	
+		@{ foreach (var item in ColorsList)
+			{
+			<label>@(item)</label><br />
+				}
+			}
+		@{ 
+			foreach(var item1 in NumberList)
+			{
+				<label> @(item1)</label><br />
+			}
+		}
+
+	</div>
+
+	<div>
+		@{ 
+			var variable = 5;
+		}
+		@if (variable%2==0)
+		{
+			<h2>Hello, This is IF BLOCK</h2>
+			<h2>Number 10 is even</h2>
+		}else if(variable%2==1)
+		{
+			<h2>Number 5 is odd</h2>
+		}
+		else
+		{
+			<h2>Else Block</h2>
+		}
+	</div>
+
+	<div>ramya@gmail.com</div>
+	
+</body>
+</html>

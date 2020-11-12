@@ -1,0 +1,64 @@
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div> 
+		<h1>Welcome To Razor</h1>
+		<p>Two Types of Razor</p>
+		<p>SingleLine and MultiLine Expressions</p>
+    </div>
+
+	<div>
+		<h1>Example of Single Line Expression<p>
+		<p>Summation of 1,2 and 3 : @(1+2+3)</p>
+	</div>
+
+	<div>
+		<h1>Example of Multi Line Expression</h1>
+		@{ 
+			var A = 1;
+			var B = 2;
+			var C = 3;
+			var Result = A + B + C;
+			<p>Result : @Result</p>
+		}
+	</div>
+
+	<div>
+		<h1> Example of Foreach</h1>
+		@{ 
+			var numbers = new List<int> { 1, 2, 3, 4, 5 };
+		}
+		@foreach(var num in numbers)
+		{
+			<p>numbers : @num</p>
+		}
+	</div>
+
+	<div>
+		<h1>Example of IF</h1>
+		@{ 
+			var X = 2;
+			var Y = 5;
+		}
+		@if(X==Y)
+		{
+			<p>Matched</p>
+		}
+		else
+		{
+			<p>Not Matched</p>
+		}
+	</div>
+
+</body>
+</html>
