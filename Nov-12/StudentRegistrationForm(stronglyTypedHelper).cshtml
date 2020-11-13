@@ -1,0 +1,104 @@
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+		<h3>Student Registration Form</h3>
+		@using (Html.BeginForm("Index", "Registration"))
+		{
+			//Table 
+		<table>
+
+			@* *************Using textbox for Username*******@
+			<tr>
+				<td>
+					UserName : @Html.TextBox("txtbx")
+				</td>
+			</tr>
+
+			@**************Using password for entering Password***********@
+			<tr>
+				<td>
+					Password : @Html.Password("pswrd")
+				</td>
+			</tr>
+
+			@* *************Using RadioButton*******@
+			<tr>
+				<td>
+					Gender :
+					<label>Male</label> @Html.RadioButton("Gender", "Male", true, new { id = "male" })
+					<label>Female</label> @Html.RadioButton("Gender", "Female", true, new { id = "female" })
+
+				</td>
+			</tr>
+
+			@* *************Using TextArea *******@
+			<tr>
+				<td>
+					Address: @Html.TextArea("Address", new { columns = 25, rows = 3 })
+				</td>
+			</tr>
+
+
+			@* *************Using Checkbox *******@
+			<tr>
+				<td>
+					Hobbies :
+					<br />
+					@Html.CheckBox("chck1")<label>Dancing</label><br />
+					@Html.CheckBox("chck2")<label>Singing</label><br />
+					@Html.CheckBox("Chck3")<label>Playing</label><br />
+				</td>
+			</tr>
+
+			@* *************Using DropDownList *******@
+			<tr>
+				<td>
+					Branch :
+					@Html.DropDownList("branch",new List<SelectListItem>
+					{
+					new SelectListItem{Text="Select Branch"},
+					new SelectListItem{Text="EEE"},
+					new SelectListItem{Text="CSE"},
+					new SelectListItem{Text="ECE"},
+
+					})
+				</td>
+			</tr>
+
+			@* *************Using DropDown *******@
+			<tr>
+				<td>
+					Skills:
+					@Html.DropDownList("Skills",new List<SelectListItem>
+					{
+				   new SelectListItem{Text="Slect Skills"},
+					new SelectListItem{Text="Coding skills"},
+					new SelectListItem{Text="Technical skills"},
+					new SelectListItem{Text="Managing skills"},
+					new SelectListItem{Text="Communication skills"},
+					})
+				</td>
+			</tr>
+
+			@* *************Using Button *******@
+			<tr>
+				<td>
+					<button>SUBMIT</button>
+				</td>
+			</tr>
+		</table>
+		}
+    </div>
+</body>
+</html>
